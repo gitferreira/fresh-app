@@ -1,11 +1,28 @@
+import bcrypt from "bcryptjs"
+
 const data = {
+	users: [
+		{
+			name: "Inigo",
+			email: "admin@admin.com",
+			password: bcrypt.hashSync("1234", 8),
+			isAdmin: true,
+		},
+		{
+			name: "John Silverhand",
+			email: "notadmin@admin.com",
+			password: bcrypt.hashSync("1234", 8),
+			isAdmin: false,
+		}
+
+	],
 	products:[
 		{
-			_id:"1",
+			
 			name: "Carrots",
 			category: "Vegetable",
 			image:"/images/p1.jpg",
-			price:10,
+			price:9,
 			countInStock:  10,
 			brand:"Eroski",
 			rating:4.5,
@@ -13,7 +30,7 @@ const data = {
 			description: "fresh product"
 		},
 		{
-			_id:"2",
+			
 			name: "Tomatoes",
 			category: "Fruit",
 			image:"/images/p2.jpg",
@@ -25,7 +42,7 @@ const data = {
 			description: "fresh product"
 		},
 		{
-			_id:"3",
+		
 			name: "Pumpkins",
 			category: "Vegetable",
 			image:"/images/p3.jpg",
@@ -37,7 +54,7 @@ const data = {
 			description: "fresh product"
 		},
 		{
-			_id:"4",
+		
 			name: "Oranges",
 			category: "Fruit",
 			image:"/images/p4.jpg",
@@ -49,7 +66,7 @@ const data = {
 			description: "fresh product"
 		},
 		{
-			_id:"1",
+			
 			name: "Honey",
 			category: "Honey",
 			image:"/images/p5.jpg",

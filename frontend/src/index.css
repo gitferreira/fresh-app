@@ -68,6 +68,50 @@ a:hover {
 	color: rgb(188, 71, 73);
 }
 
+ul{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+li{
+	margin-top:1rem ;
+}
+
+input,
+select,
+textarea,
+button{
+	padding: 1rem;
+	border-radius: 0.5rem;
+	border: 0.1rem #a4a4a4 solid;
+	font-family:  Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+}
+
+button {
+	background-color: #f8f8f8;
+	cursor: pointer;
+}
+
+input:hover,
+select:hover,
+textarea:hover,
+button:hover {
+	border: 0.1rem #404040 solid;
+}
+
+button.primary{
+	background-color: #f0c040;
+
+}
+
+button.block{
+	width: 100%;
+}
+
 /*Header*/
 
 header a{
@@ -81,6 +125,14 @@ a.brand {
 	font-weight: bold;
 }
 
+.badge {
+	background-color: rgb(188, 71, 73);
+	color: white;
+	border-radius: 50%;
+	padding: 0.2rem 0.7rem;
+	font-size: 1.4rem;
+	margin-left: 0.2rem;
+}
 .row {
 	display:flex;
 	flex-wrap: wrap;
@@ -90,11 +142,31 @@ a.brand {
 .row.center {
 	justify-content: center;
 }
+.row.top {
+	align-items: flex-start;
+}
 
+.col-1{
+	flex: 1 1 25rem;
+
+}
+
+.col-2{
+	flex: 2 1 50rem;
+}
+
+.min-30 {
+	min-width: 30rem;
+}
 /*Image*/
 
 img {
 	border-radius: 0.5rem;
+}
+
+img.small {
+	max-width: 5rem;
+	width: 100%;
 }
 
 img.medium {
@@ -103,6 +175,10 @@ img.medium {
   height: 40rem;
 }
 
+img.large {
+	width: 100%;
+	max-width: 600px;
+}
 /*Card*/
 
 .card{
@@ -113,7 +189,7 @@ img.medium {
 }
 
 .card-body{
-  padding: 1 rem;
+  padding: 1rem;
  
 }
 
@@ -130,4 +206,97 @@ img.medium {
 
 .rating span {
 	color: rgb(167, 201, 87);
+}
+
+.rating span:last-child{
+	color: grey;
+}
+
+/*Alert*/
+.loading {
+	display: block !important;
+}
+
+.success{
+	color: rgb(167, 201, 87);
+}
+
+.danger{
+	color: rgb(188, 71, 73);
+}
+
+.alert{
+	padding: 1rem;
+	border: 0.1rem solid transparent;
+	border-radius: 0.5rem;
+}
+
+.alert-info{
+	color: blue;
+	background-color: #e0e0ff;
+}
+
+.alert-danger{
+	color: tomato;
+	background-color: #ffe0e0e0;
+}
+
+/*Form*/
+
+.form{
+	max-width: 60rem;
+	margin: 0 auto;
+}
+
+.form > div {
+	display:flex;
+	flex-direction: column;
+	margin: 1rem;
+}
+
+.form label {
+	margin: 1rem 0;
+	display: block;
+}
+
+/*Dropdown*/
+
+.dropdown{
+	display: inline-block;
+	position:relative;
+}
+
+.dropdown-content {
+	position: absolute;
+	display: none;
+	right: 0;
+	min-width: 12rem;
+	padding: 1rem;
+	z-index: 1;
+	background-color:  rgb(56, 102, 65);
+	margin: 0;
+	margin-top: 0.4rem;
+	border-radius: 0.5rem;
+
+}
+
+.dropdown:hover  .dropdown-content {
+	display: block;
+}
+
+/* Checkout Steps */
+
+.checkout-steps > div {
+	border-top: 0.3rem lightgray solid;
+	color: lightgray;
+	flex: 1;
+	padding: 1rem;
+
+}
+
+
+.checkout-steps > div.active {
+	border-top-color: rgb(106, 153, 78); 
+	color: rgb(106, 153, 78); 
+	font-weight: bold;
 }
